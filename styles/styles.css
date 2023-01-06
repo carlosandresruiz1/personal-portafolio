@@ -86,6 +86,28 @@ section {
   background-color: chartreuse;
 }
 
+.active {
+  display: block;
+  -webkit-animation: scaleAnim 0.5s ease-in-out;
+          animation: scaleAnim 0.5s ease-in-out;
+}
+@-webkit-keyframes scaleAnim {
+  0% {
+    transform: translateX(-100%) scaleX(0);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+@keyframes scaleAnim {
+  0% {
+    transform: translateX(-100%) scaleX(0);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+
 .controls {
   position: fixed;
   z-index: 10;

@@ -87,6 +87,19 @@ section{
     background-color: chartreuse;
 }
 
+.active{
+    display: block;
+    animation: scaleAnim .5s ease-in-out;
+    @keyframes scaleAnim {
+        0%{
+            transform: translateX(-100%) scaleX(0);
+        }
+        100%{
+            transform: translateX(0) scaleX(1);
+        }
+    }
+}
+
 //controls
 .controls{
     position: fixed;
