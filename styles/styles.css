@@ -6,6 +6,7 @@
 }
 
 :root {
+  /*main*/
   --color-primary: #1E1F21;
   --color-secundary: #39FF13;
   --color-white: #ffffff;
@@ -18,7 +19,10 @@
   --color-grey-5: #2a2e35;
   --color-grey-6: #12181b;
   --br-sm-2: 14px;
-  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3) ;
+  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+  /*New retro wave*/
+  --color-primary-retro: linear-gradient(#01050A,#000b38);
+  --color-secundary-retro: linear-gradient(#FF2941,#eb8108,#eedf0a);
 }
 
 body {
@@ -65,7 +69,7 @@ section {
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: steelblue;
+  background: var(--color-primary-retro);
 }
 
 .sec3 {
@@ -251,4 +255,101 @@ section {
   height: 100%;
   background-color: var(--color-secundary);
   transform: translateX(0);
+}
+
+.main-title {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-title .nrw {
+  z-index: 50;
+}
+.main-title .triangle {
+  z-index: 0;
+  position: absolute;
+  margin: auto;
+  width: 40%;
+  height: 40%;
+  background: var(--color-secundary-retro);
+  -webkit-clip-path: polygon(38% 14%, 0 57%, 100% 77%);
+          clip-path: polygon(38% 14%, 0 57%, 100% 77%);
+  margin-bottom: -30px;
+}
+
+@font-face {
+  font-family: OutRun;
+  src: url("https://jackphilippi.com.au/cdn/fonts/outrun_future.otf") format("opentype");
+}
+.new {
+  font-size: 5.2em;
+  text-transform: uppercase;
+  font-family: "OutRun", "Helvetica", sans-serif;
+  color: transparent;
+  position: relative;
+  display: block;
+  letter-spacing: -15px;
+  transform: rotate(-10deg) skew(-20deg);
+  margin-left: -100px;
+  margin-bottom: -120px;
+}
+
+.new > .letter {
+  -webkit-text-stroke: 2px #F4C6F4;
+  margin-top: -8px;
+  display: inline-block;
+  padding: 0 1px;
+  -webkit-animation: glow 2.5s linear infinite;
+          animation: glow 2.5s linear infinite;
+}
+
+@-webkit-keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 6px #CF33D9) drop-shadow(0 0 6px #CF33D9);
+  }
+  50% {
+    filter: drop-shadow(0 0 1px #CF33D9) drop-shadow(0 0 1px #CF33D9);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #CF33D9) drop-shadow(0 0 6px #CF33D9);
+  }
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 6px #CF33D9) drop-shadow(0 0 6px #CF33D9);
+  }
+  50% {
+    filter: drop-shadow(0 0 1px #CF33D9) drop-shadow(0 0 1px #CF33D9);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #CF33D9) drop-shadow(0 0 6px #CF33D9);
+  }
+}
+.retro {
+  font-size: 5.5em;
+  font-weight: 800;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: -12px;
+  transform: rotate(-10deg) skew(-15deg);
+  margin-bottom: -20px;
+}
+
+.retro > .letter {
+  display: inline-block;
+  padding: 0 10px;
+  margin: 0 -10px;
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIzMiUiIHN0b3AtY29sb3I9IiMxODE5MWEiLz48c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iIzE1N2JlNiIvPjxzdG9wIG9mZnNldD0iNTIlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PHN0b3Agb2Zmc2V0PSI1NiUiIHN0b3AtY29sb3I9IiMxODE5MWEiLz48c3RvcCBvZmZzZXQ9Ijg1JSIgc3RvcC1jb2xvcj0iIzE1N2JlNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
+  background: linear-gradient(to bottom, #18191a 32%, #157be6 40%, #ffffff 52%, #18191a 56%, #157be6 85%, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
 }/*# sourceMappingURL=styles.css.map */
